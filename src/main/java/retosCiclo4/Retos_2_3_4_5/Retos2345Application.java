@@ -2,7 +2,6 @@ package retosCiclo4.Retos_2_3_4_5;
 
 import retosCiclo4.Retos_2_3_4_5.interfaces.CleaningProductInterface;
 import retosCiclo4.Retos_2_3_4_5.interfaces.UserInterface;
-import retosCiclo4.Retos_2_3_4_5.interfaces.OrderInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,8 +19,7 @@ public class Retos2345Application implements CommandLineRunner {
     private CleaningProductInterface cleaningProductInterface;
     @Autowired
     private UserInterface userInterface;
-    @Autowired
-    private OrderInterface orderInterface;
+    
 
 	public static void main(String[] args) {
 		SpringApplication.run(Retos2345Application.class, args);
@@ -34,7 +32,7 @@ public class Retos2345Application implements CommandLineRunner {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         cleaningProductInterface.deleteAll();
         userInterface.deleteAll();
-        orderInterface.deleteAll(); 
+        
     }
 
 }
